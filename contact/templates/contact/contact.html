@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Contacto {% endblock %}
+
+{% block content %}
+{% if 'ok' in request.GET %}
+<p style="color: red;">Mensaje enviado correctamente</p>
+{% endif %}
+<p><strong>Contacto:</strong>  </p>
+<form action="" method="POST">
+    {% csrf_token %}
+        <div class="form-group">
+            <p><label>Nombre: </label> {{ form.name }}</p>
+            {{ form.name.errors }}
+        </div>
+
+        <div class="form-group">
+            <p><label>Email: </label> {{ form.email }}</p>
+            {{ form.email.errors }}
+        </div>
+
+        <div class="form-group">
+            <p><label>Mensaje: </label> {{ form.content }}</p>
+        {{ form.content.errors }}
+        </div> 
+    
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
+
