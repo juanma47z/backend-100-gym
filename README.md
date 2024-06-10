@@ -9,12 +9,12 @@ Proyecto que brinda una web funcional que contiene:
 ## Arquitectura
 - Paginas dinamicas:  Servicios. Contacto
 - Paginas estaticas: Home, Historia, Visitanos, Registro, Ingreso
-
-## Instalación
+  
 - Gestión de servicios
 - Información de contacto
 - Registro e inicio de sesión de usuarios
-  
+- 
+## Instalación
 1- Clonar el repo:
   git clone [https://github.com/tuusuario/gimnasio-django.git](https://github.com/juanma47z/backend-100-gym.git)
 
