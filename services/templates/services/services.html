@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Servicios {% endblock %}
+
+{% block content %}
+{% for service in service %}
+<h1>{{ service.title|capfirst }}</h1>
+<p>{{ service.content|capfirst }}</p>
+<p>Profe a cargo:
+    {% for coach in service.coach.all %}
+    {{ coach.name }} {{ coach.last_name }}
+    {% endfor %}
+</p>
+
+<p>Costo: ${{ service.price }}</p>
+{% endfor %}
+{% endblock %}
